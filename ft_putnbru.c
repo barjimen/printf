@@ -1,31 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   printf.h                                           :+:      :+:    :+:   */
+/*   ft_putnbru.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: barjimen <barjimen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/03 17:36:49 by barjimen          #+#    #+#             */
-/*   Updated: 2023/08/15 18:06:25 by barjimen         ###   ########.fr       */
+/*   Created: 2023/08/10 16:10:26 by barjimen          #+#    #+#             */
+/*   Updated: 2023/08/15 18:31:24 by barjimen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef	PRINTF_H
-# define	PRINTF_H
+#include "printf.h"
 
-# include <stdio.h>
-# include <unistd.h>
-# include <stdlib.h>
-# include <stddef.h>
-# include <string.h>
-# include <limits.h>
-# include <ctype.h>
-# include <stdarg.h>
-
-int     ft_putchar(int c);
-int     ft_putnbr(int  nbr);
-int     ft_printf(char const *src, ...);
-int     ft_putstr(char *str);
-int     ft_putnbru(unsigned long long nbr);
-
-#endif
+int	ft_putnbru(unsigned long long nbr)//casteamos a unsigned y ademas lo gestionamos en base 10
+{
+	if (nbr < 10)
+	{	
+		ft_putchar(nbr + 48);
+		return (1);
+	}
+	else
+		ft_putnbr(nbr / 10);
+	ft_putnbr(nbr % 10);
+	return(0);
+}	

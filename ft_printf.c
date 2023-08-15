@@ -6,7 +6,7 @@
 /*   By: barjimen <barjimen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/13 21:11:14 by barjimen          #+#    #+#             */
-/*   Updated: 2023/08/11 14:04:19 by barjimen         ###   ########.fr       */
+/*   Updated: 2023/08/15 19:27:59 by barjimen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,12 @@ int ifs(va_list arg, char x)
         return(ft_putstr(va_arg(arg, char *)));
     else if(x == 'i')
         return(ft_putnbr(va_arg(arg, int)));
+    else if(x == 'u')
+        return(ft_putnbru(va_arg(arg,unsigned int)));
+    else if((x == 'x') || (x == 'X'))//en proceso
+        return(0);
+    else if(x == 'p')//en proceso
+        return(0);
     else if(x == '%')
         return(ft_putchar('%'));
     
@@ -50,8 +56,8 @@ int ft_printf(char const *src, ...)
     return (size);
 }
 
-int main(){
-    ft_printf("Es %d y es %c , %s, el número es %% \n", 12, 'x', "Holi caracoli");
-    printf("Es %d y es %c , %s, el número es %% \n", 12, 'x', "Holi caracoli");
+/*int main(){
+    ft_printf("Es %u y es %c , %s, el número es %% \n", -1, 'x', "Holi caracoli");
+    printf("Es %u y es %c , %s, el número es , %i \n", -1, 'x', "Holi caracoli", 100);
     return 0;
-}
+}*/
