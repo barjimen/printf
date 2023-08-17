@@ -6,7 +6,7 @@
 /*   By: barjimen <barjimen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/13 21:11:14 by barjimen          #+#    #+#             */
-/*   Updated: 2023/08/17 21:12:38 by barjimen         ###   ########.fr       */
+/*   Updated: 2023/08/17 21:21:11 by barjimen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,30 +30,27 @@ int	ifs(va_list arg, char x)
 		return (ft_point(va_arg(arg, void *)));
 	else if (x == '%')
 		return (ft_putchar('%'));
-		
 	return (0);
 }
 
+int	ft_printf(char const *src, ...)
+{
+	va_list	arg;
+	int		size;
 
-int ft_printf(char const *src, ...)
-{   
-	va_list arg;
-	va_start(arg,src);
-	int	size;
-	
+	va_start(arg, src);
 	size = 0;
 	while (*src != '\0')
 	{
 		if (*src == '%')
 		{
-			size = ifs(arg, *(src + 1));  
+			size = ifs(arg, *(src + 1));
 			src ++;
 		}
-		else 
+		else
 			ft_putchar((int )*src);
 		src++;
 	}
 	va_end(arg);
-	
 	return (size);
 }
