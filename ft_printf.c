@@ -6,7 +6,7 @@
 /*   By: barjimen <barjimen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/13 21:11:14 by barjimen          #+#    #+#             */
-/*   Updated: 2023/08/15 19:27:59 by barjimen         ###   ########.fr       */
+/*   Updated: 2023/08/17 19:53:13 by barjimen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,10 @@ int ifs(va_list arg, char x)
         return(ft_putnbr(va_arg(arg, int)));
     else if(x == 'u')
         return(ft_putnbru(va_arg(arg,unsigned int)));
-    else if((x == 'x') || (x == 'X'))//en proceso
-        return(0);
+    else if((x == 'x') || (x == 'X'))//da un warning al realizar el primer make
+        return(ft_x_or_X(x, va_arg(arg, int)));
     else if(x == 'p')//en proceso
-        return(0);
+        return(ft_point(va_arg(arg, int)));
     else if(x == '%')
         return(ft_putchar('%'));
     

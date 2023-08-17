@@ -6,7 +6,7 @@
 #    By: barjimen <barjimen@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/15 18:45:27 by barjimen          #+#    #+#              #
-#    Updated: 2023/08/15 20:02:03 by barjimen         ###   ########.fr        #
+#    Updated: 2023/08/17 19:55:42 by barjimen         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,6 +17,10 @@ FILE_C = 	ft_putchar.c \
 			ft_putnbru.c \
 			ft_putstr.c  \
 			ft_printf.c  \
+			ft_hexa.c 	 \
+			ft_strlen.c	 \
+			ft_x_or_X.c  \
+			ft_point.c 	 \
 			
 FILE_O = ${FILE_C:.c=.o}
 FILE_O_BONUS = ${FILE_C_BONUS:.c=.o}

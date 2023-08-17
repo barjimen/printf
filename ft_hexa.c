@@ -1,31 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_hexa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: barjimen <barjimen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/11 11:38:36 by barjimen          #+#    #+#             */
-/*   Updated: 2023/08/17 17:38:39 by barjimen         ###   ########.fr       */
+/*   Created: 2023/08/17 16:38:12 by barjimen          #+#    #+#             */
+/*   Updated: 2023/08/17 19:38:37 by barjimen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printf.h"
 
-int ft_putstr(char *str)
-{	
-	int	i;
-
-	i = 0;
-	if(!str)
-	{
-		write(1,"(null)",6);
-		return(0);
-	}
-	while (str[i] != '\0')
-	{
-		write(1, &str[i], 1);
-		i++;
-	}
-    return (0);
+int ft_hexa(int nb, char *base)
+{
+     int    cont;
+     
+     cont = 0;
+     if(nb > (int)ft_strlen(base))
+     {
+        ft_hexa(nb/(unsigned int)ft_strlen(base), base);
+        nb = nb % (unsigned int)ft_strlen(base);
+     }
+     cont++;
+     
+    ft_putchar(base[nb]);
+    return(cont);
 }

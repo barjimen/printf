@@ -2,8 +2,7 @@
 
 int main()
 {
-    int i = 2753;
-    //ft_printf("Es %u y es %c , %s, el número es %% \n", -1, 'x', "Holi caracoli");
-    printf("Integer -> %d\nHexa -> %x/%X\nPutero -> %p", i, i, i, i);
+    ft_printf("Es %u, %s, %d, la prueba del hexa %x, point %p\n", -1, NULL, 10,2753,3020);
+    printf("%s, hexa es %x, point %p\n", NULL, 2753,3020);
     return 0;
 }

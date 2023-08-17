@@ -1,31 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_point.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: barjimen <barjimen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/11 11:38:36 by barjimen          #+#    #+#             */
-/*   Updated: 2023/08/17 17:38:39 by barjimen         ###   ########.fr       */
+/*   Created: 2023/08/17 19:49:00 by barjimen          #+#    #+#             */
+/*   Updated: 2023/08/17 19:53:38 by barjimen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printf.h"
 
-int ft_putstr(char *str)
-{	
-	int	i;
-
-	i = 0;
-	if(!str)
-	{
-		write(1,"(null)",6);
-		return(0);
-	}
-	while (str[i] != '\0')
-	{
-		write(1, &str[i], 1);
-		i++;
-	}
-    return (0);
+int ft_point(int nb)
+{   
+    write(1,"0x",3);
+    ft_hexa(nb, "0123456789abcdef");
+    return(0);
 }

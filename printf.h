@@ -6,7 +6,7 @@
 /*   By: barjimen <barjimen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/03 17:36:49 by barjimen          #+#    #+#             */
-/*   Updated: 2023/08/15 18:06:25 by barjimen         ###   ########.fr       */
+/*   Updated: 2023/08/17 19:54:52 by barjimen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,9 @@ int     ft_putnbr(int  nbr);
 int     ft_printf(char const *src, ...);
 int     ft_putstr(char *str);
 int     ft_putnbru(unsigned long long nbr);
+int     ft_strlen(char *str);
+int     ft_hexa(int nb, char * base);
+int     ft_x_or_X(char x, int nb);
+int     ft_point(int nb);
 
 #endif
