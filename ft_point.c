@@ -6,18 +6,18 @@
 /*   By: barjimen <barjimen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/17 19:49:00 by barjimen          #+#    #+#             */
-/*   Updated: 2023/08/17 20:18:48 by barjimen         ###   ########.fr       */
+/*   Updated: 2023/08/17 21:05:28 by barjimen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printf.h"
 
-int ft_point(void *nb)
-{   
-    int a;
-    
-    a = (int)nb;
-    write(1,"0x",2);
-    ft_hexa(nb, "0123456789abcdef");
-    return(0);
+int	ft_point(void *nb)
+{
+	int	a;
+
+	a = (int)nb;
+	write(1, "0x", 2);
+	ft_hexa(nb, "0123456789abcdef");
+	return (0);
 }
