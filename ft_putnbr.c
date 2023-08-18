@@ -6,7 +6,7 @@
 /*   By: barjimen <barjimen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/10 16:10:26 by barjimen          #+#    #+#             */
-/*   Updated: 2023/08/10 19:58:19 by barjimen         ###   ########.fr       */
+/*   Updated: 2023/08/18 13:51:55 by barjimen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,5 @@ int	ft_putnbr(int nbr)
 	else
 		ft_putnbr(nbr / 10);
 	ft_putnbr(nbr % 10);
-	return(0);
+	return (0);
 }	
