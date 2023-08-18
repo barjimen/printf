@@ -1,10 +1,13 @@
 #include "printf.h"
 
 int main()
-{
-    void *a;
-    a = 1024;
-    ft_printf("Es %u, %s, %d, la prueba del hexa %x, point %p\n", -1, NULL, 10,2753,a);
-    printf("%s, hexa es %x, point %p\n", NULL, 2753,a);
+{   
+    int medida1;
+    int medida2;
+
+    medida1 = ft_printf("-> %c\n", '*');
+    medida2 = printf("-> %c\n",'*');
+    
+    printf("medida 1 -> %d\n medida 2 -> %d\n", medida1, medida2);
     return 0;
 }

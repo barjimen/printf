@@ -6,7 +6,7 @@
 /*   By: barjimen <barjimen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/13 21:11:14 by barjimen          #+#    #+#             */
-/*   Updated: 2023/08/17 21:21:11 by barjimen         ###   ########.fr       */
+/*   Updated: 2023/08/18 15:23:19 by barjimen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,11 +44,14 @@ int	ft_printf(char const *src, ...)
 	{
 		if (*src == '%')
 		{
-			size = ifs(arg, *(src + 1));
+			size += ifs(arg, *(src + 1));
 			src ++;
 		}
 		else
+		{
 			ft_putchar((int )*src);
+			size++;
+		}
 		src++;
 	}
 	va_end(arg);
