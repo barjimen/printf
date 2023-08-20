@@ -14,7 +14,7 @@
 
 int	count_digits(int nb)
 {
-	int	i;
+	static int	i;
 
 	i = 0;
 	if(nb < 0)
@@ -28,6 +28,7 @@ int	count_digits(int nb)
 		nb = nb % 10;
 	}
 	i++;
+	return (i);
 }
 
 int	ft_putnbr(int nbr)
@@ -52,3 +53,4 @@ int	ft_putnbr(int nbr)
 		ft_putnbr(nbr / 10);
 	ft_putnbr(nbr % 10);
 	return (count_digits(nbr)); 	
+}
