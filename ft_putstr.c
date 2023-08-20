@@ -27,5 +27,5 @@ int	ft_putstr(char *str)
 		write(1, &str[i], 1);
 		i++;
 	}
-	return (0);
+	return (i);
 }

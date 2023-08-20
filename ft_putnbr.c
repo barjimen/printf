@@ -12,6 +12,24 @@
 
 #include "printf.h"
 
+int	count_digits(int nb)
+{
+	int	i;
+
+	i = 0;
+	if(nb < 0)
+	{
+		i++;
+		nb *= -1;
+	}
+	if (nb >= 10)
+	{
+		count_digits(nb / 10);
+		nb = nb % 10;
+	}
+	i++;
+}
+
 int	ft_putnbr(int nbr)
 {
 	if (nbr == -2147483648)
@@ -28,10 +46,9 @@ int	ft_putnbr(int nbr)
 	if (nbr < 10)
 	{	
 		ft_putchar(nbr + 48);
-		return (1);
+		return (count_digits(nbr));
 	}
 	else
 		ft_putnbr(nbr / 10);
 	ft_putnbr(nbr % 10);
-	return (0);
-}	
+	return (count_digits(nbr)); 	
