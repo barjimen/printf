@@ -12,8 +12,9 @@
 
 #include "printf.h"
 
-int	ft_x_or_X(char x, int nb)
+int	ft_x_or_X(char x, unsigned long int nb)
 {
+	printf("%ld es nb en x or x\n",nb);
 	if (x == 'x')
 		return (ft_hexa(nb, "0123456789abcdef"));
 	else if (x == 'X')

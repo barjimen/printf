@@ -12,17 +12,15 @@
 
 #include "printf.h"
 
-
-
-int	ft_hexa(int nb, char *base)
+int	ft_hexa(long int nb, char *base)
 {
-	int	cont;
+	static	int	cont;
 	
-	printf("%x\n", nb);
-	if (nb >= (int)ft_strlen(base))
+	printf("%ld es en hexa\n", nb);
+	if (nb >= (long int)ft_strlen(base))
 	{
-		ft_hexa(nb / (unsigned int)ft_strlen(base), base);
-		nb = nb % (unsigned int)ft_strlen(base);
+		ft_hexa(nb / ft_strlen(base), base);
+		nb = nb % ft_strlen(base);
 	}
 	cont++;
 	ft_putchar(base[nb]);

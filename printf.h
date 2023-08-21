@@ -28,8 +28,8 @@ int     ft_printf(char const *src, ...);
 int     ft_putstr(char *str);
 int     ft_putnbru(unsigned long long nbr);
 int     ft_strlen(char *str);
-int     ft_hexa(int nb, char * base);
-int     ft_x_or_X(char x, int nb);
+int     ft_hexa(long int nb, char * base);
+int     ft_x_or_X(char x, unsigned long int nb);
 int     ft_point(void *nb);
 
 #endif

@@ -14,10 +14,13 @@
 
 int	ft_point(void *nb)
 {
-	int	a;
+	unsigned long int	a;//es unsigned long int o long int?
+	static int count;
 
-	a = (int)nb;
+	a = (unsigned long int)nb;
+	printf("el valor de a es: %ld\n", a);
+	printf("el valor de nb es: %p\n", nb);
 	write(1, "0x", 2);
-	ft_hexa(a, "0123456789abcdef");
-	return (0);
+	count += (ft_hexa(a, "0123456789abcdef") + 2);
+	return (count);
 }
