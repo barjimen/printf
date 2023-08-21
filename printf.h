@@ -6,7 +6,7 @@
 /*   By: barjimen <barjimen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/03 17:36:49 by barjimen          #+#    #+#             */
-/*   Updated: 2023/08/17 20:19:12 by barjimen         ###   ########.fr       */
+/*   Updated: 2023/08/22 00:27:56 by barjimen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,6 @@ int     ft_strlen(char *str);
 int     ft_hexa(long int nb, char * base);
 int     ft_x_or_X(char x, unsigned long int nb);
 int     ft_point(void *nb);
+int     ft_hexa_p(long int nb, char * base);
 
 #endif

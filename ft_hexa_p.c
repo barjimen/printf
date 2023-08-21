@@ -1,23 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_x_or_X.c                                        :+:      :+:    :+:   */
+/*   ft_hexa_p.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: barjimen <barjimen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/17 18:59:32 by barjimen          #+#    #+#             */
-/*   Updated: 2023/08/22 00:28:31 by barjimen         ###   ########.fr       */
+/*   Created: 2023/08/17 16:38:12 by barjimen          #+#    #+#             */
+/*   Updated: 2023/08/22 00:27:39 by barjimen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printf.h"
 
-int	ft_x_or_X(char x, unsigned long int nb)
+int	ft_hexa_p(long int nb, char *base)
 {
-	//printf("%ld es nb en x or x\n",nb);
-	if (x == 'x')
-		return (ft_hexa(nb, "0123456789abcdef"));
-	else if (x == 'X')
-		return (ft_hexa(nb, "0123456789ABCDEF"));
-	return (0);
+	static	int	cont;
+
+	if (nb >= (long int)ft_strlen(base))
+	{
+		ft_hexa_p(nb / ft_strlen(base), base);
+		nb = nb % ft_strlen(base);
+	}
+	cont++;
+	ft_putchar(base[nb]);
+	return (cont);
 }

@@ -21,6 +21,7 @@ FILE_C = 	ft_putchar.c \
 			ft_strlen.c	 \
 			ft_x_or_X.c  \
 			ft_point.c 	 \
+			ft_hexa_p.c  \
 			
 FILE_O = ${FILE_C:.c=.o}
 FILE_O_BONUS = ${FILE_C_BONUS:.c=.o}
