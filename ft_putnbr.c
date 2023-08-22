@@ -6,32 +6,11 @@
 /*   By: barjimen <barjimen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/10 16:10:26 by barjimen          #+#    #+#             */
-/*   Updated: 2023/08/22 21:27:07 by barjimen         ###   ########.fr       */
+/*   Updated: 2023/08/22 21:36:28 by barjimen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printf.h"
-
-/*static	int	count_digits(int nb)
-{
-	int	i;
-
-	i = 0;
-	if (nb < 0)
-	{
-		printf("%s","aqui entra");
-		i++;
-		nb *= -1;
-	}
-	if (nb >= 10)
-	{
-		i += count_digits(nb / 10);
-		nb = nb % 10;
-	}
-	i++;
-	printf("Mide = %d\n",i);
-	return (i);
-}*/
 
 int	ft_putnbr(int nbr)
 {
