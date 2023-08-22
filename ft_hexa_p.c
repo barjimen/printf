@@ -6,19 +6,20 @@
 /*   By: barjimen <barjimen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/17 16:38:12 by barjimen          #+#    #+#             */
-/*   Updated: 2023/08/22 00:27:39 by barjimen         ###   ########.fr       */
+/*   Updated: 2023/08/22 20:30:07 by barjimen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printf.h"
 
-int	ft_hexa_p(long int nb, char *base)
+int	ft_hexa_p(unsigned long int nb, char *base)
 {
-	static	int	cont;
+	int	cont;
 
-	if (nb >= (long int)ft_strlen(base))
+	cont = 0;
+	if (nb >= (unsigned long int)ft_strlen(base))
 	{
-		ft_hexa_p(nb / ft_strlen(base), base);
+		cont += ft_hexa_p(nb / ft_strlen(base), base);
 		nb = nb % ft_strlen(base);
 	}
 	cont++;

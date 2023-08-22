@@ -6,13 +6,13 @@
 /*   By: barjimen <barjimen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/13 21:11:14 by barjimen          #+#    #+#             */
-/*   Updated: 2023/08/18 18:42:24 by barjimen         ###   ########.fr       */
+/*   Updated: 2023/08/22 18:06:52 by barjimen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printf.h"
 
-int	ifs(va_list arg, char x)
+static	int	ifs(va_list arg, char x)
 {
 	if (x == 'd')
 		return (ft_putnbr(va_arg(arg, int)));
@@ -25,7 +25,7 @@ int	ifs(va_list arg, char x)
 	else if (x == 'u')
 		return (ft_putnbru(va_arg(arg, unsigned int)));
 	else if ((x == 'x') || (x == 'X'))
-		return (ft_x_or_X(x, va_arg(arg, int)));
+		return (ft_low_x_or_up_x(x, va_arg(arg, int)));
 	else if (x == 'p')
 		return (ft_point(va_arg(arg, void *)));
 	else if (x == '%')

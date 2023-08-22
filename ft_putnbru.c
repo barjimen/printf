@@ -6,19 +6,18 @@
 /*   By: barjimen <barjimen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/10 16:10:26 by barjimen          #+#    #+#             */
-/*   Updated: 2023/08/18 13:52:42 by barjimen         ###   ########.fr       */
+/*   Updated: 2023/08/22 18:03:16 by barjimen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printf.h"
 //casteamos a unsigned y ademas lo gestionamos en base 10
 
-int	count_digits_u(unsigned long long nb)
+static	int	count_digits_u(unsigned long long nb)
 {
 	static int	i;
 
 	i = 0;
-
 	if (nb >= 10)
 	{
 		count_digits_u(nb / 10);
