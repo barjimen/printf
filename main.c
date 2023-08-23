@@ -17,6 +17,6 @@ int main()
     else
         write(2, "OK\n", 3);
     printf("medida 1 -> %d\nmedida 2 -> %d\n", medida1, medida2);
-
+    //getchar();
     return 0;
 }

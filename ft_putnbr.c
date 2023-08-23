@@ -6,7 +6,7 @@
 /*   By: barjimen <barjimen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/10 16:10:26 by barjimen          #+#    #+#             */
-/*   Updated: 2023/08/23 14:00:03 by barjimen         ###   ########.fr       */
+/*   Updated: 2023/08/23 17:49:32 by barjimen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,7 @@ int	ft_putnbr(int nbr)
 
 	size = 0;
 	if (nbr == -2147483648)
-	{
-		ft_putchar('-');
-		ft_putchar('2');
-		size += 2;
-		nbr = 147483648;
-	}
+		return (write(1, "-2147483648", 11));
 	if (nbr < 0)
 	{	
 		ft_putchar('-');
