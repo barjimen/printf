@@ -6,11 +6,11 @@
 /*   By: barjimen <barjimen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/10 16:10:26 by barjimen          #+#    #+#             */
-/*   Updated: 2023/08/22 21:36:28 by barjimen         ###   ########.fr       */
+/*   Updated: 2023/08/23 14:00:03 by barjimen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 int	ft_putnbr(int nbr)
 {

@@ -6,7 +6,7 @@
 #    By: barjimen <barjimen@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/15 18:45:27 by barjimen          #+#    #+#              #
-#    Updated: 2023/08/22 18:46:20 by barjimen         ###   ########.fr        #
+#    Updated: 2023/08/23 13:59:22 by barjimen         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,6 +45,5 @@ re: fclean all
 
 test: $(NAME)
 	$(CC) $(CFLAGS) main.c -L. -lftprintf
-#$(CC) $(CFLAGS) -I printf.h -c $< -o $@
 
 .Phony: all clean fclean re

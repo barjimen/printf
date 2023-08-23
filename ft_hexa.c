@@ -6,15 +6,15 @@
 /*   By: barjimen <barjimen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/22 00:28:18 by barjimen          #+#    #+#             */
-/*   Updated: 2023/08/22 20:24:01 by barjimen         ###   ########.fr       */
+/*   Updated: 2023/08/23 13:58:30 by barjimen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 int	ft_hexa(long int nb, char *base)
 {
-	int		cont;
+	int				cont;
 	unsigned int	nbr;
 
 	cont = 0;
@@ -25,7 +25,7 @@ int	ft_hexa(long int nb, char *base)
 		nbr = nb;
 	if (nbr >= (long int)ft_strlen(base))
 	{
-		ft_hexa(nbr / ft_strlen(base), base);
+		cont += ft_hexa(nbr / ft_strlen(base), base);
 		nbr = nbr % ft_strlen(base);
 	}
 	cont++;

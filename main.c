@@ -1,4 +1,6 @@
-/*#include "printf.h"
+#include "ft_printf.h"
+
+#include <limits.h>
 
 int main()
 {   
@@ -8,11 +10,13 @@ int main()
 
     valor = -14523;
 
-    medida1 = ft_printf("%d\n", -20000);
-    medida2 = printf("%d\n", -20000);
-
-    printf("medida 1 -> %d\n medida 2 -> %d\n", medida1, medida2);
+    medida1 = ft_printf("|||%d%%%i|||\n", 1, 0);
+    medida2 = printf("|||%d%%%i|||\n", 1, 0);
+    if(medida1 != medida2)
+        write(2, "KK\n", 3);
+    else
+        write(2, "OK\n", 3);
+    printf("medida 1 -> %d\nmedida 2 -> %d\n", medida1, medida2);
 
     return 0;
 }
-*/

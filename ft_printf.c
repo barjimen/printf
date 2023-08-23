@@ -6,11 +6,11 @@
 /*   By: barjimen <barjimen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/13 21:11:14 by barjimen          #+#    #+#             */
-/*   Updated: 2023/08/22 18:06:52 by barjimen         ###   ########.fr       */
+/*   Updated: 2023/08/23 13:58:45 by barjimen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 static	int	ifs(va_list arg, char x)
 {

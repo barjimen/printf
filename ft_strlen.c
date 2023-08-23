@@ -6,11 +6,11 @@
 /*   By: barjimen <barjimen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/17 19:08:17 by barjimen          #+#    #+#             */
-/*   Updated: 2023/08/18 13:53:08 by barjimen         ###   ########.fr       */
+/*   Updated: 2023/08/23 14:00:13 by barjimen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 int	ft_strlen(char *str)
 {
